@@ -1,3 +1,9 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .site-header {
     display: flex;
@@ -7,23 +13,28 @@
     height: 80px;
     padding: 0 20px;
     box-sizing: border-box;
-    background: #fff;
+    background: #222222;
     z-index: 5;
 }
+
 .navbtn {
     margin-right: auto;
     width: 200px;
     display: flex;
     align-items: center;
 }
+.navbtn button {
+    font-size: 15px;
+}
+
 .logo {
     margin-left: auto;
 }
 .logo img {
     display: block;
-    width: 200px;
-    border: 1px solid #222222;
+    width: 300px;
 }
+
 .pfp{
     position: absolute;
     inset: 0;
@@ -34,18 +45,16 @@
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fill the parent while preserving aspect ratio */
+    object-fit: cover; 
     object-position: center;
 }
 
-/* diagonal split */
 .diagonal {
     position: relative;
     height: calc(100vh - 80px);
     overflow: hidden;
 }
 
-/* upper triangle (image) */
 .top-triangle {
     position: absolute;
     inset: 0;
@@ -57,8 +66,6 @@
     z-index: 1;
     overflow: hidden;
 }
-
-/* lower triangle (text) */
 .bottom-triangle {
     position: absolute;
     inset: 0;
@@ -72,7 +79,7 @@
     z-index: 0;
 }
 
-/* content inside lower triangle */
+
 .tri-content {
     max-width: 420px;
     text-align: right;
@@ -86,10 +93,10 @@
     opacity: 0.9;
 }
 
-/* responsive adjustments */
-@media (max-width: 800px) {
+@media (max-width: 100%) {
     .top-triangle { clip-path: polygon(0 0, 100% 0, 0 60%); }
     .bottom-triangle { clip-path: polygon(100% 100%, 100% 0, 0 60%); }
     .tri-content { text-align: center; width: 100%; }
     .bottom-triangle { align-items: center; justify-content: center; padding: 20px; }
 }
+
