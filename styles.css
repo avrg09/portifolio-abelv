@@ -1,6 +1,17 @@
-.homepagebtn{
-margin-left: auto;
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
-.logo{
+.homepagebtn {
     margin-right: auto;
+    width: 200px;
+}
+.logo {
+    margin-left: auto;
+}
+.logo img {
+    display: block;
+    width: 200px;
 }
