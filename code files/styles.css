@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .site-header {
@@ -16,16 +17,66 @@ html, body{
     background: #222222;
     z-index: 5;
 }
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #222222; 
+    color: #ffffff;
+}
+.site-footer button {
+    width: 140px;
+    height: 48px;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background: #ff6b35;
+    
+}
 
 .navbtn {
     margin-right: auto;
     width: 200px;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.dropdownnav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: #222;
+    border: 1px solid #fff;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.navbtn:hover .dropdownnav {
+    display:flex;
+}
+.dropdown a {
+    color: #fff;
+    padding: 10px 16px;
+    text-decoration: none;
 }
 .navbtn button {
     font-size: 15px;
+    background: #ff6b35;
 }
+
 
 .logo {
     margin-left: auto;
@@ -87,10 +138,13 @@ html, body{
 .tri-content h1 {
     margin: 0 0 8px 0;
     font-size: 28px;
+    color: #ff6b35;
 }
 .tri-content p {
     margin: 0;
     opacity: 0.9;
+    color: #ff6b35;
+    
 }
 
 @media (max-width: 100%) {
