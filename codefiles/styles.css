@@ -32,7 +32,7 @@ html, body{
     background: #222222; 
     color: #ffffff;
 }
-.site-footer button {
+.site-footer .button {
     width: 140px;
     height: 48px;
     font-size: 16px;
@@ -42,9 +42,11 @@ html, body{
     align-items: center;
     justify-content: center;
     background: transparent;
-    border: 1px solid #ffffff;
+    
     cursor: pointer;
-    background: #ff6b35;
+    background: #c23c0a;
+    color: #fff;
+    text-decoration: none;
     
 }
 
@@ -56,7 +58,7 @@ html, body{
     position: relative;
     z-index: 10;
 }
-.dropdownnav{
+.dropdownnav {
     position: absolute;
     top: 100%;
     left: 0;
@@ -70,14 +72,15 @@ html, body{
 .navbtn:hover .dropdownnav {
     display:flex;
 }
-.dropdown a {
+.dropdownnav a {
     color: #fff;
     padding: 10px 16px;
     text-decoration: none;
 }
 .navbtn button {
     font-size: 15px;
-    background: #ff6b35;
+    background: #c23c0a;
+    border: 0;
 }
 
 
@@ -87,6 +90,7 @@ html, body{
 .logo img {
     display: block;
     width: 300px;
+    background: #c23c0a;
 }
 
 .pfp{
@@ -140,13 +144,14 @@ html, body{
 }
 .tri-content h1 {
     margin: 0 0 8px 0;
-    font-size: 28px;
-    color: #ff6b35;
+    font-size: 50px;
+    color: #c23c0a;
 }
 .tri-content p {
     margin: 0;
     opacity: 0.9;
-    color: #ff6b35;
+    color: #c23c0a;
+    font-size: 25px;
     
 }
 
