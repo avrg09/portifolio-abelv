@@ -9,6 +9,7 @@ html, body{
       'Helvetica Neue', sans-serif;
 }
 
+
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -42,7 +43,6 @@ html, body{
     align-items: center;
     justify-content: center;
     background: transparent;
-    
     cursor: pointer;
     background: #c23c0a;
     color: #fff;
