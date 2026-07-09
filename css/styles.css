@@ -7,8 +7,17 @@ html, body{
      'Segoe UI', Roboto, Oxygen, Ubuntu,
       Cantarell, 'Open Sans',
       'Helvetica Neue', sans-serif;
+    min-height: 100vh;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content {
+    flex: 1;
+}
 
 .site-header {
     display: flex;
@@ -47,7 +56,6 @@ html, body{
     background: #c23c0a;
     color: #fff;
     text-decoration: none;
-    
 }
 
 .navbtn {
@@ -160,5 +168,20 @@ html, body{
     .bottom-triangle { clip-path: polygon(100% 100%, 100% 0, 0 60%); }
     .tri-content { text-align: center; width: 100%; }
     .bottom-triangle { align-items: center; justify-content: center; padding: 20px; }
+}
+
+.abtbackgroundimg {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    display: block;
+}
+
+.abtbackgroundimg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
 }
 
