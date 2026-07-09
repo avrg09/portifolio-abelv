@@ -1,3 +1,11 @@
-async function loadComponent(id,file){const r=await fetch(file);document.getElementById(id).innerHTML=await r.text();}
-loadComponent('header','components/header.html');
-loadComponent('footer','components/footer.html');
+fetch('components/header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    });
+
+fetch('components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+    });
