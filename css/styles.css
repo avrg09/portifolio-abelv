@@ -87,8 +87,11 @@ body {
 }
 .navbtn button {
     font-size: 15px;
-    background: #c23c0a;
+    background: #222222;
     border: 0;
+}
+.navlogo {
+    fill: #c23c0a;
 }
 
 
@@ -101,19 +104,36 @@ body {
     background: #c23c0a;
 }
 
-.pfp{
+
+.pfp {
     position: absolute;
     inset: 0;
     margin: 0;
     display: block;
 }
-.pfp img{
+.pfp1 img{
+    display: block;
+    width: 63%;
+    height: 105%;
+    object-fit: cover;
+    object-position: center 45%;
+    position: absolute;
+    left: -12px;
+}
+.pfp2 {
+    position: fixed;
+    inset: 0;
+    margin: 0;
+    display: block;
+}
+.pfp2 img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center;
+    height: 46%;
+    object-fit: cover;
+    object-position: center 15%;
 }
+
 
 .diagonal {
     position: relative;
@@ -138,35 +158,37 @@ body {
     background: #222;
     color: #fff;
     clip-path: polygon(100% 100%, 100% 0, 0 100%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 40px;
     z-index: 0;
 }
 
-
 .tri-content {
-    max-width: 420px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    max-width: min(420px, 80vw);
     text-align: right;
+    padding: 20px;
 }
+
 .tri-content h1 {
     margin: 0 0 8px 0;
-    font-size: 50px;
+    font-size: clamp(2rem, 4vw, 3.125rem);
+    line-height: 1.1;
     color: #c23c0a;
 }
+
 .tri-content p {
     margin: 0;
     opacity: 0.9;
     color: #c23c0a;
-    font-size: 25px;
-    
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    line-height: 1.4;
 }
 
 @media (max-width: 100%) {
     .top-triangle { clip-path: polygon(0 0, 100% 0, 0 60%); }
     .bottom-triangle { clip-path: polygon(100% 100%, 100% 0, 0 60%); }
-    .tri-content { text-align: center; width: 100%; }
+    .tri-content { text-align: center; width: 100%; max-width: 100%;}
     .bottom-triangle { align-items: center; justify-content: center; padding: 20px; }
 }
 
