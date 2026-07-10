@@ -1,11 +1,25 @@
-fetch('components/header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    // Fetch Header
+    fetch('components/header.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load header');
+            return response.text();
+        })
+        .then(data => {
+            const headerEl = document.getElementById('header-placeholder');
+            if (headerEl) headerEl.innerHTML = data;
+        })
+        .catch(err => console.error(err));
 
-fetch('components/footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-    });
+    // Fetch Footer
+    fetch('components/footer.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load footer');
+            return response.text();
+        })
+        .then(data => {
+            const footerEl = document.getElementById('footer-placeholder');
+            if (footerEl) footerEl.innerHTML = data;
+        })
+        .catch(err => console.error(err));
+});
